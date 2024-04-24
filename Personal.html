@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal protfolio Emeka Adimora</title>
+    <style>
+        body {
+            background-color: #282828; /* Dark grey background */
+            color: #f8f8f2; /* Light grey text */
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+        }
+
+        .terminal-input {
+            background-color: #333; /* Darker grey for the input area */
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .prompt {
+            color: #50fa7b; /* Green for the prompt */
+        }
+
+        .command-input {
+            background-color: #333; /* Darker grey for the input field */
+            color: #f8f8f2; /* Light grey text */
+            border: none;
+            outline: none;
+            padding: 5px;
+            width: 100%;
+        }
+
+        .terminal-output {
+            margin-top: 20px;
+        }
+
+        .tip {
+            color: #50fa7b; /* Green for the tip */
+            margin-top: 10px;
+        }
+
+        .command, .heading {
+            color: #FFA500; /* Neon orange */
+        }
+
+        .heading {
+            font-weight: bold;
+        }
+
+        /* Spinning animation around the Y-axis */
+        @keyframes spin {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+
+        #asciiArt {
+            animation: spin 10s linear infinite; /* Adjusted duration to 10s */
+            transform-origin: center; /* Ensure the rotation is around the center */
+        }
+
+        /* Typewriter animation */
+        @keyframes typewriter {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .terminal-output span {
+            opacity: 0;
+            animation: typewriter 0.1s forwards;
+        }
+
+        .terminal-output span:nth-child(1) { animation-delay: 0.1s; }
+        .terminal-output span:nth-child(2) { animation-delay: 0.2s; }
+        .terminal-output span:nth-child(3) { animation-delay: 0.3s; }
+        /* Add more delays as needed */
+    </style>
+</head>
+<body>
+    <div id="asciiArt">
+        <pre>
+ /$$$$$$$$                         /$$                        /$$$$$$        /$$ /$$                                           
+| $$_____/                        | $$                       /$$__ $$      | $$|__/                                           
+| $$       /$$$$$$/$$$$   /$$$$$$ | $$   /$$ /$$$$$$       | $$ \ $$ /$$$$$$$ /$$ /$$$$$$/$$$$   /$$$$$$   /$$$$$$ /$$$$$$ 
+| $$$$$   | $$_ $$_ $$ /$$__ $$| $$ /$$/ |____ $$      | $$$$$$$$ /$$__ $$| $$| $$_ $$_ $$ /$$__ $$ /$$__ $$|____ $$
+| $$__/   | $$ \ $$ \ $$| $$$$$$$$| $$$$$$/   /$$$$$$$      | $$__ $$| $$ | $$| $$| $$ \ $$ \ $$| $$ \ $$| $$ \__/ /$$$$$$$
+| $$      | $$ | $$ | $$| $$_____/| $$_ $$ /$$__ $$      | $$ | $$| $$ | $$| $$| $$ | $$ | $$| $$ | $$| $$      /$$__ $$
+| $$$$$$$$| $$ | $$ | $$| $$$$$$$| $$ \ $$| $$$$$$$      | $$ | $$| $$$$$$$| $$| $$ | $$ | $$| $$$$$$/| $$     | $$$$$$$
+|________/|__/ |__/ |__/ \_______/|__/ \__/ \_______/      |__/ |__/ \_______/|__/|__/ |__/ |__/ \______/ |__/      \_______/
+        </pre>
+    </div>
+
+    <p class="tip">Type 'help' to see available commands.</p>
+    <div class="terminal-input">
+        <span class="prompt">visiterUser@fkcodes.com:~$</span> <input type="text" class="command-input" id="commandInput" placeholder="Type a command">
+    </div>
+    <div class="terminal-output" id="terminalOutput">
+        <!-- Output will be dynamically inserted here -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
