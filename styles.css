@@ -9,6 +9,14 @@ body {
     background-color: #121212; /* Darker grey background for dark mode */
     color: #f8f8f2; /* Light grey text for dark mode */
 }
+.neon-orange {
+    color: #FFA500; /* Neon orange */
+}
+
+.white-text {
+    color: #f8f8f2; /* White */
+}
+
 
 .dark-mode-toggle {
     position: absolute;
@@ -51,7 +59,12 @@ body {
 }
 
 .command-output-text {
-    color: #f8f8f2; /* Light grey text */
+    color: #f8f8f2; /* White */
+}
+
+
+.command-output:contains('help') {
+    color: #FFA500; /* Neon orange */
 }
 
 .terminal-output {
@@ -63,8 +76,12 @@ body {
     color: #FFA500; /* Neon orange */
 }
 
-.heading {
-    color: #f8f8f2; /* Light grey text */
+..heading {
+    color: #FFA500; /* Neon orange */
+}
+
+.white-text {
+    color: #f8f8f2; /* White */
 }
 
 /* Spinning animation around the Y-axis */
@@ -77,6 +94,14 @@ body {
     animation: spin 10s linear infinite; /* Adjusted duration to 10s */
     transform-origin: center; /* Ensure the rotation is around the center */
 }
+.platform {
+    color: #FFA500; /* Neon orange */
+}
+
+.username {
+    color: #00FFFF; /* Neon blue */
+}
+
 
 @keyframes blink {
     0% { opacity: 1; }
