@@ -1,0 +1,86 @@
+body {
+    background-color: #282828; /* Dark grey background */
+    color: #f8f8f2; /* Light grey text */
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+}
+
+.dark-mode {
+    background-color: #121212; /* Darker grey background for dark mode */
+    color: #f8f8f2; /* Light grey text for dark mode */
+}
+
+.dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.terminal-input {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.prompt {
+    color: #FFA500; /* Neon orange */
+}
+
+.command-input {
+    color: #f8f8f2; /* Light grey text */
+    border: none;
+    outline: none;
+    padding: 5px;
+    flex-grow: 1;
+    background: transparent; /* Make the input background transparent */
+    caret-color: #FFA500; /* Make the input cursor neon orange */
+}
+/* Existing CSS remains the same */
+
+.command-input::after {
+    content: '|'; /* Use a pseudo-element for the cursor */
+    animation: blink 1s infinite;
+    margin-left: 5px;
+    color: #FFA500; /* Make the cursor neon orange */
+    font-size: 20px; /* Make the cursor bigger */
+}
+
+.command-output {
+    color: #FFA500; /* Neon orange */
+}
+
+.command-output-text {
+    color: #f8f8f2; /* Light grey text */
+}
+
+.terminal-output {
+    margin-top: 20px;
+    white-space: pre-wrap; /* Ensure commands are printed in lines */
+}
+
+.command {
+    color: #FFA500; /* Neon orange */
+}
+
+.heading {
+    color: #f8f8f2; /* Light grey text */
+}
+
+/* Spinning animation around the Y-axis */
+@keyframes spin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+#asciiArt {
+    animation: spin 10s linear infinite; /* Adjusted duration to 10s */
+    transform-origin: center; /* Ensure the rotation is around the center */
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
